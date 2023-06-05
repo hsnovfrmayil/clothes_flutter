@@ -1,5 +1,5 @@
 import 'package:clothes_flutter/home.dart';
-import 'package:clothes_flutter/login.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }

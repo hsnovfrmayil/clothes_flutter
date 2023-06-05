@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
           ),
           Positioned(
             bottom: 300,
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width,
               child: const Text(
                 "Ideal Store For Shopping",
@@ -66,7 +66,10 @@ class _HomePageState extends State<HomePage> {
             right: 20,
             bottom: 200,
             child: TextButton(
-              onPressed: (() {}),
+              onPressed: (() {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const LoginPage()));
+              }),
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 padding: const EdgeInsets.all(15),
@@ -90,7 +93,10 @@ class _HomePageState extends State<HomePage> {
               right: 20,
               height: MediaQuery.of(context).size.height / 13,
               child: ElevatedButton(
-                  onPressed: (() {}),
+                  onPressed: (() {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const LoginPage()));
+                  }),
                   style: ElevatedButton.styleFrom(
                     backgroundColor:
                         Colors.red, // Arka plan rengi olarak kırmızıyı ayarla

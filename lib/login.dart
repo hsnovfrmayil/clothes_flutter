@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             title: Column(
-              children: [
+              children: const [
                 Text("Log Into Your"),
                 Text("Account"),
               ],
@@ -36,23 +36,22 @@ class _LoginPageState extends State<LoginPage> {
           TextAdapter(text: " Forget Password?"),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.only(left: 30, top: 30, right: 20),
+              padding: const EdgeInsets.only(left: 30, top: 30, right: 20),
               child: ElevatedButton(
                 onPressed: () {},
                 child: Container(
-                    padding: EdgeInsets.all(20),
-                    child: Text(
+                    padding: const EdgeInsets.all(20),
+                    child: const Text(
                       "Sign in",
                       style: TextStyle(fontSize: 20),
                     )),
               ),
             ),
           ),
-          SliverToBoxAdapter(
-            child: Padding(
-                padding: EdgeInsets.only(left: 30, top: 30, right: 20),
-                child: 
-          ),
+          const SliverToBoxAdapter(
+              child: Padding(
+                  padding: EdgeInsets.only(left: 30, top: 30, right: 20),
+                  child: Text(""))),
         ],
       ),
     );
@@ -62,6 +61,7 @@ class _LoginPageState extends State<LoginPage> {
 class AdapterMethod extends StatelessWidget {
   String text;
   bool answer;
+
   AdapterMethod({
     required this.text,
     required this.answer,
@@ -72,12 +72,12 @@ class AdapterMethod extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.only(left: 30, right: 30, top: 20),
+        padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
         child: TextField(
           obscureText: answer,
           obscuringCharacter: '*',
-          decoration:
-              InputDecoration(border: OutlineInputBorder(), labelText: text),
+          decoration: InputDecoration(
+              border: const OutlineInputBorder(), labelText: text),
         ),
       ),
     );
@@ -92,10 +92,10 @@ class TextAdapter extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.only(left: 30, top: 20),
+        padding: const EdgeInsets.only(left: 30, top: 20),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.w600,
           ),
